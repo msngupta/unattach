@@ -15,10 +15,10 @@ See [homepage](https://unattach.app/) for more info.
 * Run with `java -jar target/client-3.0.0-jar-with-dependencies.jar`.
 
 ## File linking
-* The file names (say abcd.xyz) in the modified emails is linked to https://msngserver.appspot.com/unattach/get\_file/abcd.xyz
-* This link redirects to https://domain.xyz/path/abcd.xyz using a preset base\_url (say https://domain.xyz/path)
-* To set the base\_url use the following syntax (https://msngserver.appspot.com/unattach/set\_path?base\_path=https://domain.xyz/path/). Bookmark the link for easy access.
-* Once the base\_url is set using the above link, it is stored in the browser session as a cookie (unattach\_base\_url)
+* The file names (say abcd.xyz) in the modified emails is linked to https://msngserver.appspot.com/unattach/get_file/abcd.xyz
+* This link redirects to https://domain.xyz/path/abcd.xyz using a preset base_url (say https://domain.xyz/path)
+* To set the base_url use the following syntax (https://msngserver.appspot.com/unattach/set_path?base_path=https://domain.xyz/path/). Bookmark the link for easy access.
+* Once the base_url is set using the above link, it is stored in the browser session as a cookie (unattach_base_url)
 
 
 ## Known Limitations
