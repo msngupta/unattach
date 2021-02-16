@@ -14,6 +14,13 @@ See [homepage](https://unattach.app/) for more info.
 * Build with `mvn clean package`.
 * Run with `java -jar target/client-3.0.0-jar-with-dependencies.jar`.
 
+## File linking
+* The file names (say abcd.xyz) in the modified emails is linked to https://msngserver.appspot.com/unattach/get\_file/abcd.xyz
+* This link redirects to https://domain.xyz/path/abcd.xyz using a preset base\_url (say https://domain.xyz/path)
+* To set the base\_url use the following syntax (https://msngserver.appspot.com/unattach/set\_path?base\_path=https://domain.xyz/path/). Bookmark the link for easy access.
+* Once the base\_url is set using the above link, it is stored in the browser session as a cookie (unattach\_base\_url)
+
+
 ## Known Limitations
 * On some emails, the app will fail with `OutOfMemoryError` even with the maximum heap size set to 2GB. This occurs
   when the Gmail API client library unpacks the downloaded email in local memory using a third-party JSON library, which

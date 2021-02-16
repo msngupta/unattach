@@ -193,13 +193,10 @@ class EmailProcessor {
       String originalFilename = entry.getKey();
       String normalizedFilename = entry.getValue();
       suffix.append("<li>");
-      suffix.append(originalFilename);
+      suffix.append("<a href='https://msngserver.appspot.com/unattach/get_file/").append(normalizedFilename).append("'>").append(originalFilename).append("</a>");
+
       if (processSettings.processOption.shouldDownload()) {
-        suffix.append(" (");
         Path normalisedPath = Paths.get(targetDirectoryAbsolutePath, normalizedFilename);
-        suffix.append("filename: ").append(normalisedPath).append(", ");
-        suffix.append("<a href='file:///").append(normalisedPath).append("'>local link</a>");
-        suffix.append(")");
       }
       suffix.append("</li>\n");
     }
@@ -210,8 +207,7 @@ class EmailProcessor {
     suffix.append("<li>Date and time: ").append(dateTimeString).append("</li>\n");
     if (processSettings.processOption.shouldDownload()) {
       suffix.append("<li>Download target host name: ").append(hostname).append("</li>\n");
-      suffix.append("<li>Download target directory: ").append(targetDirectoryAbsolutePath).append("</li>\n");
-      suffix.append("<li><i>File links only work in native email apps (e.g. Mail, Outlook) on the target host.</i></li>\n");
+      
     }
     suffix.append("</ul></p>\n");
     Document document = Jsoup.parse(html);
