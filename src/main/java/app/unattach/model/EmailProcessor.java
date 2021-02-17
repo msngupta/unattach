@@ -193,7 +193,7 @@ class EmailProcessor {
       String originalFilename = entry.getKey();
       String normalizedFilename = entry.getValue();
       suffix.append("<li>");
-      suffix.append("<a href='https://msngserver.appspot.com/unattach/get_file/").append(normalizedFilename).append("'>").append(originalFilename).append("</a>");
+      suffix.append("<a href='https://unattach.appspot.com/get_file/").append(normalizedFilename).append("'>").append(originalFilename).append("</a>");
 
       if (processSettings.processOption.shouldDownload()) {
         Path normalisedPath = Paths.get(targetDirectoryAbsolutePath, normalizedFilename);
