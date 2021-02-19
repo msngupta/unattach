@@ -164,6 +164,7 @@ public class LiveModel implements Model {
         addLabel(newMessage.getId(), processSettings.processOption.getDownloadedLabelId());
       }
       addLabel(newMessage.getId(), processSettings.processOption.getRemovedLabelId());
+      addLabel(newMessage.getId(), "STARRED");
       removeOriginalMessage(processSettings.processOption.shouldDeleteOriginal(), message.getId()); // 5-10 quota units
     }
     return new ProcessEmailResult(newUniqueId, fileNames);

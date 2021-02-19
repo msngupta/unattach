@@ -169,9 +169,7 @@ class EmailProcessor {
       String originalFilename = entry.getKey();
       String normalizedFilename = entry.getValue();
       newText.append(" - ").append(originalFilename);
-      if (processSettings.processOption.shouldDownload()) {
-        newText.append(" (filename: ").append(normalizedFilename).append(")");
-      }
+      newText.append(" - https://unattach.appspot.com/get_file/").append(normalizedFilename);
       newText.append("\n");
     }
     newText.append("\nInformation about the change:\n");
